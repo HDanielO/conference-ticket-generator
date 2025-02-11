@@ -80,7 +80,8 @@
       <div class="input-layout">
         <label for="emailInput">Email Address
         </label>
-        <input type="email" name="emailInput" id="emailInput" placeholder="example@email.com" required>
+        <input type="email" name="emailInput" id="emailInput" placeholder="example@email.com" required
+          oninput="handleEmailVerification()">
         <p class="emailValidStatus  displayNone"><span><img src="./assets/images/icon-info-red.svg" alt=""></span>Please
           enter a valid image address
         </p>
