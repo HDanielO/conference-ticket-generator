@@ -1,57 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Conference ticket generator</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
   </style>
+
+
+
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
   <!-- Form starts -->
+  <header>
+    <img src="./assets/images/logo-full.svg" alt="">
+  </header>
 
-  Your Journey to Coding Conf 2025 Starts Here!
+  <main>
+    <section>
+      <h2>
+        Your Journey to Coding Conf 2025 Starts Here!
+      </h2>
+      <p>
+        Secure your spot at next year's biggest coding conference.
+      </p>
+    </section>
 
-  Secure your spot at next year's biggest coding conference.
+    <img src="./assets/images/pattern-lines.svg" alt="bg-lines" id="bg-lines">
 
-  Upload Avatar
-  Drag and drop or click to upload
-  Upload your photo (JPG or PNG, max size: 500KB).
+    <img src="./assets/images/pattern-circle.svg" alt="bg-circle" id="bg-circle">
+    <img src="./assets/images/pattern-squiggly-line-top.svg" alt="bg-squiggly-top" id="bg-squiggly-top">
 
-  Full Name
+    <form>
+      <fieldset>
+        <legend>
+          Upload Avatar
+        </legend>
+        <label for="imageInput">
+          <div class="fieldset-label-layout">
+            <img src="./assets/images/icon-upload.svg" alt="upload_icon">
+            <p>Drag and drop or click to upload</p>
+            <input type="file" name="imageInput" id="imageInput" required>
+          </div>
+        </label>
+        <p class="uploadStatus"><span><img src="./assets/images/icon-info.svg" alt=""></span>Upload your photo (JPG or
+          PNG,
+          max size: 500KB).
+        </p>
+        <p class="errorUploadStatus displayNone"><span><img src="./assets/images/icon-info-red.svg" alt=""></span>File
+          too large.
+          Please upload a photo under 500KB
+        </p>
+      </fieldset>
 
-  Email Address
-  example@email.com
 
-  GitHub Username
-  @yourusername
+      <div class="input-layout">
+        <label for="fullNameInput">Full Name</label>
+        <input type="text" name="fullNameInput" id="fullNameInput" required>
+      </div>
+      <div class="input-layout">
+        <label for="emailInput">Email Address
+        </label>
+        <input type="email" name="emailInput" id="emailInput" placeholder="example@email.com" required>
+        <p class="emailValidStatus  displayNone"><span><img src="./assets/images/icon-info-red.svg" alt=""></span>Please
+          enter a valid image address
+        </p>
 
-  Generate My Ticket
+      </div>
+
+
+      <div class="input-layout">
+        <label for="userNameInput">GitHub Username
+        </label>
+        <input type="text" name="userNameInput" id="userNameInput" placeholder="@yourusername" required>
+      </div>
+
+
+      <button type="submit">Generate My Ticket</button>
+
+    </form>
+  </main>
+
+  <img src="./assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg" alt="bg-squiggly-bottom-mobile"
+    id="bg-squiggly-bottom-mobile">
+
+
+
+
+
+
 
   <!-- Form ends -->
 
   <!-- Generated tickets starts -->
 
-  Congrats, <!-- Full Name -->! Your ticket is ready.
+  <!-- Congrats,  -->
+  <!-- Full Name -->
+  <!-- "! Your ticket is ready." -->
 
-  We've emailed your ticket to <!-- Email Address --> and will send updates in the run up to the event.
+  <!-- We've emailed your ticket to -->
+  <!-- Email Address -->
+  <!-- and will send updates in the run up to the event. -->
 
-  Coding Conf
-  Jan 31, 2025 / Austin, TX
+  <!-- Coding Conf
+  Jan 31, 2025 / Austin, TX -->
 
   <!-- Generated tickets ends -->
-  
+
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+    Coded by <a href="https://github.com/HDanielO">Hameed Daniel</a>.
   </div>
+  <script src="./script.js"></script>
 </body>
+
 </html>
