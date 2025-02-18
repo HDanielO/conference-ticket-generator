@@ -35,8 +35,17 @@
     <img src="./assets/images/logo-full.svg" alt="">
   </header>
 
-  <main>
-    <section>
+
+  <!-- <img src="./assets/images/pattern-lines.svg" alt="bg-lines" id="bg-lines">
+ -->
+  <!-- <img src="./assets/images/pattern-circle.svg" alt="bg-circle" id="bg-circle">
+  <img src="./assets/images/pattern-squiggly-line-top.svg" alt="bg-squiggly-top" id="bg-squiggly-top"> -->
+
+
+  <main class="">
+
+    <!-- Form descriptions -->
+    <section class="form-description">
       <h2>
         Your Journey to Coding Conf 2025 Starts Here!
       </h2>
@@ -45,11 +54,7 @@
       </p>
     </section>
 
-    <img src="./assets/images/pattern-lines.svg" alt="bg-lines" id="bg-lines">
-
-    <img src="./assets/images/pattern-circle.svg" alt="bg-circle" id="bg-circle">
-    <img src="./assets/images/pattern-squiggly-line-top.svg" alt="bg-squiggly-top" id="bg-squiggly-top">
-
+    <!-- Form starts -->
     <form>
       <fieldset>
         <legend>
@@ -57,9 +62,23 @@
         </legend>
         <label for="imageInput">
           <div class="fieldset-label-layout">
-            <img src="./assets/images/icon-upload.svg" alt="upload_icon">
-            <p>Drag and drop or click to upload</p>
-            <input type="file" name="imageInput" id="imageInput" required>
+            <div class="un-uploaded-layout ">
+              <img src="./assets/images/icon-upload.svg" alt="upload_icon">
+              <p>Drag and drop or click to upload</p>
+              <input type="file" name="imageInput" id="imageInput" required onchange="handleUpload()" accept="image/*">
+            </div>
+
+            <!-- Layout of fieldset when file is uploaded -->
+            <div class="uploaded-layout displayNone ">
+              <img src="" alt="uploaded-image" id="uploaded-image">
+              <div class="edit-upload-layout">
+                <button id="removeImgBtn" onclick="removeUpload()">Remove image</button>
+                <button id="changeImgBtn" onclick="changeUpload()">
+                  Change image
+                </button>
+              </div>
+            </div>
+
           </div>
         </label>
         <p class="uploadStatus"><span><img src="./assets/images/icon-info.svg" alt=""></span>Upload your photo (JPG or
@@ -101,31 +120,57 @@
     </form>
   </main>
 
-  <img src="./assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg" alt="bg-squiggly-bottom-mobile"
-    id="bg-squiggly-bottom-mobile">
-
-
-
-
-
-
-
   <!-- Form ends -->
+
+
 
   <!-- Generated tickets starts -->
 
-  <!-- Congrats,  -->
-  <!-- Full Name -->
-  <!-- "! Your ticket is ready." -->
+  <section class="ticket-section displayNone">
 
-  <!-- We've emailed your ticket to -->
-  <!-- Email Address -->
-  <!-- and will send updates in the run up to the event. -->
 
-  <!-- Coding Conf
-  Jan 31, 2025 / Austin, TX -->
+    <div class="ticket-description">
+      <h1 class="ticket-header">Congrats, <span class="user-fullname"></span>! Your ticket is ready."
+      </h1>
+      <p class="ticket-email-info">
+        We've emailed your ticket to
+        <span id="user-email">
+        </span>
+        and will send updates in the run up to the event.
+      </p>
+    </div>
 
+    <div class="ticket-card-layout">
+      <div class="ticket-card-left">
+        <div class="ticket-card-left-top">
+          <img src="./assets/images/logo-mark.svg" alt="conf-logo" id="conf-logo">
+          <div class="conf-detail-layout">
+            <h3>Coding Conf</h3>
+            <p>Jan 31, 2025 / Austin, TX</p>
+          </div>
+        </div>
+        <div class="ticket-card-left-bottom">
+          <img src="" alt="user image" id="user-image">
+          <div class="user-details-layout">
+            <h3 class="user-fullname"></h3>
+            <div class="github-details-layout">
+              <img src="./assets/images/icon-github.svg" alt="github icon" id="github-icon">
+              <p id="user-github-username"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ticket-card-right">
+        <p id="ticket-code">#12390101</p>
+      </div>
+    </div>
+  </section>
   <!-- Generated tickets ends -->
+
+
+  <!-- <img src="./assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg" alt="bg-squiggly-bottom-mobile"
+    id="bg-squiggly-bottom-mobile"> -->
+
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
