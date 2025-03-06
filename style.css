@@ -236,13 +236,15 @@ button {
   cursor: pointer;
 }
 
+/* BACKGROUND PATTERN IMAGES */
+
 #bg-lines {
   z-index: -1;
   position: absolute;
   max-width: 100%;
   top: 0%;
-  left: 0%;
-  min-height: 50vh;
+  /* left: 0; */
+  /* min-height: 70%; */
 }
 
 /* change position in tablet and desktop*/
@@ -259,7 +261,7 @@ button {
   position: fixed;
   top: 5%;
   right: 0;
-  width: 5em;
+  width: 7.5em;
 }
 
 #bg-squiggly-bottom-mobile {
@@ -394,3 +396,7 @@ button {
   font-size: 0.6rem;
   color: var(--neutral-300);
 }
+
+/* TABLET SCREEN SIZE */
+
+/* DESKTOP SCREEN SIZE */

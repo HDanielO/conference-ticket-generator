@@ -21,6 +21,7 @@ const userFullNameElms = document.querySelectorAll(".user-fullname");
 const userEmailElm = document.querySelector("#user-email");
 const userGithubUsernameElm = document.querySelector("#user-github-username");
 const userImageElm = document.querySelector("#user-image");
+const ticketCodeElm = document.querySelector("#ticket-code");
 
 //Email verification functionality
 const handleEmailVerification = () => {
@@ -62,6 +63,7 @@ const form = document.querySelector("form");
 const generateTicket = () => {
   mainElm.classList.add("displayNone");
   ticketSectionElm.classList.remove("displayNone");
+  const ticketCode = "#" + Math.round(Math.random() * 10 ** 5);
 
   userFullNameElms.forEach((ufnElm) => {
     ufnElm.textContent = fullNameInput.value;
@@ -70,6 +72,7 @@ const generateTicket = () => {
   userEmailElm.textContent = emailInputElm.value;
   userGithubUsernameElm.textContent = userNameInputElm.value;
   userImageElm.src = URL.createObjectURL(imageInputELm.files[0]);
+  ticketCodeElm.textContent = ticketCode;
 };
 
 // Add event listener to the form
