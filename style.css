@@ -39,6 +39,7 @@ html {
 }
 
 body {
+  background-color: var(--neutral-900);
   background-image: url("./assets/images/background-mobile.png");
   color: var(--neutral-0);
   background-size: cover;
