@@ -111,3 +111,8 @@ const changeUpload = () => {
 //6. And you can access the item by .files[0] since it's the first and only file that is stored in the array except you specify multiple attribute in the input(file) element.
 //7. Also learnt that to reset the value of tht input(file), you have to set t=its value to "" (input.value = ""), instead of resetting the .files array to [] an empty array.
 //8. also learnt about .preventDefault() method, a method that prevents the default behavior of an event from happening, so i used it to prevents a form doing the default setting of submitting, when the submit event is activated.
+
+// DIFFICULTY FACED:
+// 1. preventing the form from submitting and still being able to validate the user input.
+//2 Styling: styling continually to be a challenge(functionality is so sweet to code)
+//3. Responsiveness of the ticket-card: This should be under styling but I just had to point it out because of the tough time it gave(I had to write numerous media queries for just one property😭)

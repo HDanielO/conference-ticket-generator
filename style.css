@@ -271,6 +271,10 @@ button {
   bottom: -10%;
 }
 
+#bg-squiggly-bottom-desktop {
+  display: none;
+}
+
 .displayNone {
   display: none;
 }
@@ -397,6 +401,117 @@ button {
   color: var(--neutral-300);
 }
 
-/* TABLET SCREEN SIZE */
+/* TABLET SCREEN SIZES */
+
+/* WARNING : TOO MANY MEDIA QUERIES INCOMING 😭(sorry) */
+
+@media only screen and (min-width: 450px) {
+  main,
+  .ticket-section {
+    max-width: 80vw;
+    margin: 0 auto;
+  }
+}
+@media only screen and (min-width: 540px) {
+  main,
+  .ticket-section {
+    max-width: 70vw;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  body {
+    background-image: url("./assets/images/background-tablet.png");
+  }
+
+  main,
+  .ticket-section {
+    max-width: 65vw;
+    margin: 0 auto;
+  }
+}
+@media only screen and (min-width: 650px) {
+  main,
+  .ticket-section {
+    max-width: 60vw;
+    margin: 0 auto;
+  }
+}
+@media only screen and (min-width: 700px) {
+  main,
+  .ticket-section {
+    max-width: 56vw;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 750px) {
+  main,
+  .ticket-section {
+    max-width: 53vw;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  main,
+  .ticket-section {
+    max-width: 50vw;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 850px) {
+  main,
+  .ticket-section {
+    max-width: 50vw;
+    margin: 0 auto;
+  }
+  .ticket-card-layout {
+    max-width: 75%;
+  }
+}
 
 /* DESKTOP SCREEN SIZE */
+
+@media only screen and (min-width: 900px) {
+  body {
+    background-image: url("./assets/images/background-desktop.png");
+  }
+
+  main,
+  .ticket-section {
+    max-width: 50vw;
+    margin: 0 auto;
+  }
+
+  .ticket-card-layout {
+    max-width: 75%;
+  }
+
+  #bg-lines {
+    z-index: -1;
+    position: absolute;
+    max-width: 100%;
+    top: -20%;
+    min-height: 50%;
+  }
+  #bg-squiggly-bottom-mobile {
+    display: none;
+  }
+
+  #bg-squiggly-bottom-desktop {
+    display: block;
+    z-index: -2;
+    max-height: 12em;
+    position: fixed;
+    bottom: 0%;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .ticket-card-layout {
+    max-width: 55%;
+  }
+}
